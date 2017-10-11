@@ -10,8 +10,8 @@ const readline = require('readline');
 const stream = require('stream');
 
 //specifying the log group and the log stream name for CloudWatch Logs
-const logGroupName = 'classic-elb-logs' //Name of the log group goes here;
-const logStreamName = 'classic-elb-stream' //Name of the log stream goes here;
+const logGroupName = process.env.LOG_GROUP_NAME //Name of the log group goes here;
+const logStreamName = process.env.LOG_STREAM_NAME //Name of the log stream goes here;
 
 exports.handler = (event, context, callback) => {
 
